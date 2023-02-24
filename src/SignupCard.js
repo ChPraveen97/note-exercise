@@ -15,8 +15,8 @@ const SignupCard = () => {
   const emailRegex = /[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+(\.com){1}/;
   const isEmail = new RegExp(emailRegex);
 
-  const handleInput = (value, set) => {
-    set(value);
+  const handlePassword = (value, setPasswordState) => {
+    setPasswordState(value);
   };
 
   const handleEmail = (value) => {
@@ -71,12 +71,12 @@ const SignupCard = () => {
                 )}
               </p>
             </div>
-            <PasswordFeild handleInput={(handleInput, setPassword)}>
+            <PasswordFeild handleInput={(handlePassword, setPassword)}>
               Password
             </PasswordFeild>
             <div>
               <PasswordFeild
-                handleInput={(handleInput, setConfirmPassword)}
+                handleInput={(handlePassword, setConfirmPassword)}
                 className="confirm-password"
               >
                 Confirm Password

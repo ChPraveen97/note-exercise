@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const PasswordFeild = ({ children, set, handleInput }) => {
+const PasswordFeild = ({ children, setPasswordState, handlePassword }) => {
   const lable = children;
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -28,7 +28,7 @@ const PasswordFeild = ({ children, set, handleInput }) => {
       <OutlinedInput
         id="outlined-adornment-password"
         type={showPassword ? "text" : "password"}
-        onChange={(e) => handleInput(e.target.value, set)}
+        onChange={(e) => handlePassword(e.target.value, setPasswordState)}
         endAdornment={
           <InputAdornment position="end">
             <IconButton

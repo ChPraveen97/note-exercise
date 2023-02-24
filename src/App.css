@@ -1,38 +1,57 @@
+* {
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-item,
+.signup-card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-page-image {
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  color: #36383a;
+}
+
+.signup-card {
+  border: 0;
+  width: 45vw;
+}
+
+.signup-details,
+.signup-textfeild {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 28vw;
+  gap: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.signup-textfeild {
+  gap: 16px;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signup-button {
+  height: 5vh;
+  border-radius: 10px;
+}
+
+.signin-message {
+  color: #8a8a8e;
+}
+
+.signin-link {
+  color: #6a39f1;
 }
